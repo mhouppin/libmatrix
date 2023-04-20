@@ -6,7 +6,7 @@
 #define __LIBMATRIX_STR2(x) #x
 
 #define LIBMATRIX_MAJOR 0
-#define LIBMATRIX_MINOR 1
+#define LIBMATRIX_MINOR 2
 #define LIBMATRIX_PATCH 0
 
 // Conditionally define the pre-release macro, so that people can test for its
