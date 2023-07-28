@@ -70,5 +70,11 @@ libmatrix.a: $(OBJECTS)
 clean:
 	rm -f $(OBJECTS) $(DEPENDS)
 	rm -f libmatrix.so libmatrix.a
+	rm -rf doc
+
+doc: libmatrix.a
+	$(CC) -I include -o build_aux/get_version build_aux/get_version.c $<
+	env LIBMX_VERSION="$$(./build_aux/get_version)" doxygen
+	rm -f build_aux/get_version
 
 .PHONY: all shared static clean
