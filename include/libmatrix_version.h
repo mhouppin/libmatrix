@@ -2,11 +2,11 @@
 #define LIBMATRIX_VERSION_H
 
 // Do not use those. Reserved for internal use only.
-#define __LIBMATRIX_STR(x) __LIBMATRIX_STR2(x)
-#define __LIBMATRIX_STR2(x) #x
+#define __LIBMX_STR(x) __LIBMX_STR2(x)
+#define __LIBMX_STR2(x) #x
 
 #define LIBMATRIX_MAJOR 0
-#define LIBMATRIX_MINOR 2
+#define LIBMATRIX_MINOR 3
 #define LIBMATRIX_PATCH 0
 
 // Conditionally define the pre-release macro, so that people can test for its

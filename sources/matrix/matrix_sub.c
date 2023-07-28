@@ -1,6 +1,7 @@
 #include "matrix.h"
 
-matrix_t *matrix_sub(matrix_t *restrict dst, const matrix_t *restrict lhs, const matrix_t *restrict rhs)
+matrix_t *matrix_sub(matrix_t *restrict dst, const matrix_t *restrict lhs,
+    const matrix_t *restrict rhs)
 {
     assert(matrix_same_dimensions(dst, lhs));
     assert(matrix_same_dimensions(dst, rhs));
