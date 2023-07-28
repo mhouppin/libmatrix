@@ -11,6 +11,8 @@ PMT_SOURCES := \
 	pmt_vec_add_to.c \
 	pmt_vec_copy.c \
 	pmt_vec_fill.c \
+	pmt_vec_fma.c \
+	pmt_vec_fma_to.c \
 	pmt_vec_scale.c \
 	pmt_vec_scale_to.c \
 	pmt_vec_sub.c \
@@ -24,6 +26,7 @@ VEC_SOURCES := \
 	vector_init_zero.c \
 	vector_init_from_value.c \
 	vector_init_from_array.c \
+	vector_linear_combine.c \
 	vector_fill.c \
 	vector_scale.c \
 	vector_scale_to.c \
