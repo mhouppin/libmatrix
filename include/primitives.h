@@ -41,4 +41,12 @@ double *pmt_vec_scale(double *restrict dst, const double *restrict src,
 /// \brief Compute `dst *= factor`.
 double *pmt_vec_scale_to(double *dst, double factor, size_t size);
 
+/// \brief Compute `dst = lhs * factor + rhs`.
+double *pmt_vec_fma(double *restrict dst, const double *restrict lhs,
+    double factor, const double *restrict rhs, size_t size);
+
+/// \brief Compute `dst += src * factor`.
+double *pmt_vec_fma_to(double *restrict dst, const double *restrict src,
+    double factor, size_t size);
+
 #endif

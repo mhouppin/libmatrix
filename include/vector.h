@@ -80,4 +80,11 @@ vector_t *vector_scale(
 /// \public \memberof vector_t
 vector_t *vector_scale_to(vector_t *dst, double factor);
 
+/// \brief Computes the linear combination of all the vectors in src using the
+/// given coefficients, storing the result in dst. This function assumes that
+/// src is an array of vectors.
+/// \public \memberof vector_t
+vector_t *vector_linear_combine(vector_t *restrict dst,
+    const vector_t *restrict src, const vector_t *restrict coeffs);
+
 #endif
