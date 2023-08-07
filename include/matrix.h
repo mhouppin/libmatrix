@@ -77,32 +77,42 @@ void matrix_destroy(matrix_t *mat);
 /// \public \memberof matrix_t
 matrix_t *matrix_fill(matrix_t *mat, double value);
 
-/// \brief Compute the addition of lhs and rhs and store it in dst.
-/// \public \memberof matrix_t
-matrix_t *matrix_add(matrix_t *restrict dst, const matrix_t *restrict lhs,
-    const matrix_t *restrict rhs);
-
 /// \brief Add src to dst.
 /// \public \memberof matrix_t
-matrix_t *matrix_add_to(matrix_t *restrict dst, const matrix_t *restrict src);
+matrix_t *matrix_add(matrix_t *restrict dst, const matrix_t *restrict src);
 
-/// \brief Compute the subtraction of lhs and rhs and store it in dst.
+/// \brief Compute the addition of lhs and rhs and store it in dst.
 /// \public \memberof matrix_t
-matrix_t *matrix_sub(matrix_t *restrict dst, const matrix_t *restrict lhs,
+matrix_t *matrix_add_to(matrix_t *restrict dst, const matrix_t *restrict lhs,
     const matrix_t *restrict rhs);
 
 /// \brief Subtract src to dst.
 /// \public \memberof matrix_t
-matrix_t *matrix_sub_to(matrix_t *restrict dst, const matrix_t *restrict src);
+matrix_t *matrix_sub(matrix_t *restrict dst, const matrix_t *restrict src);
+
+/// \brief Compute the subtraction of lhs and rhs and store it in dst.
+/// \public \memberof matrix_t
+matrix_t *matrix_sub_to(matrix_t *restrict dst, const matrix_t *restrict lhs,
+    const matrix_t *restrict rhs);
+
+/// \brief Multiply each element in dst by factor.
+/// \public \memberof matrix_t
+matrix_t *matrix_scale(matrix_t *dst, double factor);
 
 /// \brief Compute the scalar multiplication of src by factor and store it in
 /// dst.
 /// \public \memberof matrix_t
-matrix_t *matrix_scale(
+matrix_t *matrix_scale_to(
     matrix_t *restrict dst, const matrix_t *restrict src, double factor);
 
-/// \brief Multiply each element in dst by factor.
+/// \brief Compute the linear interpolation of dst and src.
 /// \public \memberof matrix_t
-matrix_t *matrix_scale_to(matrix_t *dst, double factor);
+matrix_t *matrix_lerp(matrix_t *restrict dst,
+    const matrix_t *restrict src, double t);
+
+/// \brief Compute the linear interpolation of lhs and rhs and store it in dst.
+/// \public \memberof matrix_t
+matrix_t *matrix_lerp_to(matrix_t *restrict dst,
+    const matrix_t *restrict lhs, const matrix_t *restrict rhs, double t);
 
 #endif

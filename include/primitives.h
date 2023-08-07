@@ -18,35 +18,35 @@ double *pmt_vec_copy(
 /// \brief Fill a buffer with a given value.
 double *pmt_vec_fill(double *dst, double value, size_t size);
 
-/// \brief Compute `dst = lhs + rhs`.
-double *pmt_vec_add(double *restrict dst, const double *restrict lhs,
-    const double *restrict rhs, size_t size);
-
 /// \brief Compute `dst += src`.
-double *pmt_vec_add_to(
+double *pmt_vec_add(
     double *restrict dst, const double *restrict src, size_t size);
 
-/// \brief Compute `dst = lhs - rhs`.
-double *pmt_vec_sub(double *restrict dst, const double *restrict lhs,
+/// \brief Compute `dst = lhs + rhs`.
+double *pmt_vec_add_to(double *restrict dst, const double *restrict lhs,
     const double *restrict rhs, size_t size);
 
 /// \brief Compute `dst -= src`.
-double *pmt_vec_sub_to(
+double *pmt_vec_sub(
     double *restrict dst, const double *restrict src, size_t size);
 
-/// \brief Compute `dst = src * factor`.
-double *pmt_vec_scale(double *restrict dst, const double *restrict src,
-    double factor, size_t size);
+/// \brief Compute `dst = lhs - rhs`.
+double *pmt_vec_sub_to(double *restrict dst, const double *restrict lhs,
+    const double *restrict rhs, size_t size);
 
 /// \brief Compute `dst *= factor`.
-double *pmt_vec_scale_to(double *dst, double factor, size_t size);
+double *pmt_vec_scale(double *dst, double factor, size_t size);
 
-/// \brief Compute `dst = lhs * factor + rhs`.
-double *pmt_vec_fma(double *restrict dst, const double *restrict lhs,
-    double factor, const double *restrict rhs, size_t size);
+/// \brief Compute `dst = src * factor`.
+double *pmt_vec_scale_to(double *restrict dst, const double *restrict src,
+    double factor, size_t size);
 
 /// \brief Compute `dst += src * factor`.
-double *pmt_vec_fma_to(double *restrict dst, const double *restrict src,
+double *pmt_vec_fma(double *restrict dst, const double *restrict src,
     double factor, size_t size);
+
+/// \brief Compute `dst = lhs * factor + rhs`.
+double *pmt_vec_fma_to(double *restrict dst, const double *restrict lhs,
+    double factor, const double *restrict rhs, size_t size);
 
 #endif
