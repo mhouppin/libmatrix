@@ -89,12 +89,12 @@ vector_t *vector_linear_combine(vector_t *restrict dst,
 
 /// \brief Compute the linear interpolation of dst and src.
 /// \public \memberof vector_t
-vector_t *vector_lerp(vector_t *restrict dst,
-    const vector_t *restrict src, double t);
+vector_t *vector_lerp(
+    vector_t *restrict dst, const vector_t *restrict src, double t);
 
 /// \brief Compute the linear interpolation of lhs and rhs and store it in dst.
 /// \public \memberof vector_t
-vector_t *vector_lerp_to(vector_t *restrict dst,
-    const vector_t *restrict lhs, const vector_t *restrict rhs, double t);
+vector_t *vector_lerp_to(vector_t *restrict dst, const vector_t *restrict lhs,
+    const vector_t *restrict rhs, double t);
 
 #endif

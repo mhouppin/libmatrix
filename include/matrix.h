@@ -107,12 +107,12 @@ matrix_t *matrix_scale_to(
 
 /// \brief Compute the linear interpolation of dst and src.
 /// \public \memberof matrix_t
-matrix_t *matrix_lerp(matrix_t *restrict dst,
-    const matrix_t *restrict src, double t);
+matrix_t *matrix_lerp(
+    matrix_t *restrict dst, const matrix_t *restrict src, double t);
 
 /// \brief Compute the linear interpolation of lhs and rhs and store it in dst.
 /// \public \memberof matrix_t
-matrix_t *matrix_lerp_to(matrix_t *restrict dst,
-    const matrix_t *restrict lhs, const matrix_t *restrict rhs, double t);
+matrix_t *matrix_lerp_to(matrix_t *restrict dst, const matrix_t *restrict lhs,
+    const matrix_t *restrict rhs, double t);
 
 #endif
