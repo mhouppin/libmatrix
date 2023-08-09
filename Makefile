@@ -28,6 +28,8 @@ VEC_SOURCES := \
 	vector_init_from_array.c \
 	vector_linear_combine.c \
 	vector_fill.c \
+	vector_lerp.c \
+	vector_lerp_to.c \
 	vector_scale.c \
 	vector_scale_to.c \
 	vector_sub.c \
@@ -42,6 +44,8 @@ MAT_SOURCES := \
 	matrix_init_from_value.c \
 	matrix_init_from_array.c \
 	matrix_fill.c \
+	matrix_lerp.c \
+	matrix_lerp_to.c \
 	matrix_scale.c \
 	matrix_scale_to.c \
 	matrix_sub.c \
