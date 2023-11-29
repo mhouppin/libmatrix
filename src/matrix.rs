@@ -13,7 +13,7 @@ impl<S: Scalar> Matrix<S> {
     pub fn new(row_count: usize, col_count: usize) -> Self {
         Self {
             inner: vec![S::ZERO; row_count * col_count],
-            col_count
+            col_count,
         }
     }
 
@@ -22,7 +22,7 @@ impl<S: Scalar> Matrix<S> {
         debug_assert!(data.len() % col_count == 0);
         Self {
             inner: data.to_vec(),
-            col_count
+            col_count,
         }
     }
 
@@ -54,6 +54,11 @@ impl<S: Scalar> Matrix<S> {
 
     pub fn as_mut_slice(&mut self) -> &mut [S] {
         self.inner.as_mut_slice()
+    }
+
+    pub fn lerp_assign(&mut self, v: &Self, t: S) {
+        *self *= S::ONE - t;
+        ops::vec_fma(self.as_mut_slice(), v.as_slice(), t);
     }
 }
 
